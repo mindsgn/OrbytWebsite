@@ -12,21 +12,15 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Card from 'react-bootstrap/Card';
 import Image from 'react-bootstrap/Image';
 import Web3 from 'web3';
-import Home from './Home';
 
-
-class App extends Component {
-  render() {
-    return (
-      <Router>
-        <Switch>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </Router>
+class Navigations extends Component{
+  render(){
+    return(
+      <Navbar collapseOnSelect className='Header'>
+        <Navbar.Brand href="/">Orbyt Technologies</Navbar.Brand>
+      </Navbar>
     );
   }
 }
 
-export default App;
+export default Navigations;
