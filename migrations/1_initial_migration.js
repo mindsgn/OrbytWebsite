@@ -1,5 +1,6 @@
 const Migrations = artifacts.require("Migrations");
 const Token = artifacts.require("Token");
+const ICO = artifacts.require("ICO");
 
 module.exports = async function(deployer) {
   await deployer.deploy(Migrations);

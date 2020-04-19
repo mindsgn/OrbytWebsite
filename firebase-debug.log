@@ -1,0 +1,20 @@
+[debug] [2020-04-18T22:44:37.823Z] ----------------------------------------------------------------------
+[debug] [2020-04-18T22:44:37.825Z] Command:       /Users/mindsgn/.nvm/versions/node/v10.13.0/bin/node /Users/mindsgn/.nvm/versions/node/v10.13.0/bin/firebase deploy
+[debug] [2020-04-18T22:44:37.825Z] CLI Version:   7.14.0
+[debug] [2020-04-18T22:44:37.825Z] Platform:      darwin
+[debug] [2020-04-18T22:44:37.825Z] Node Version:  v10.13.0
+[debug] [2020-04-18T22:44:37.831Z] Time:          Sun Apr 19 2020 00:44:37 GMT+0200 (South Africa Standard Time)
+[debug] [2020-04-18T22:44:37.831Z] ----------------------------------------------------------------------
+[debug] [2020-04-18T22:44:37.831Z] 
+[debug] [2020-04-18T22:44:37.849Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-18T22:44:37.849Z] > authorizing via signed-in user
+[debug] [2020-04-18T22:44:37.850Z] [iam] checking project orbyt-wallet for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-04-18T22:44:37.852Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-04-18T22:44:37.852Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-04-18T22:44:38.523Z] <<< HTTP RESPONSE 200
+[debug] [2020-04-18T22:44:38.544Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/orbyt-wallet:testIamPermissions  
+
+[debug] [2020-04-18T22:44:41.118Z] <<< HTTP RESPONSE 200
+[debug] [2020-04-18T22:44:41.121Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/orbyt-wallet  
+ 

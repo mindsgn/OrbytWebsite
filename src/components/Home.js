@@ -1,82 +1,112 @@
 import React, { Component } from 'react';
-import logo from '../logo.png';
+import phone from '../img/wallet-image.png';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import Card from 'react-bootstrap/Card';
-import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
-import Web3 from 'web3';
+
 import Navigation from './Navigation';
+import { DiGithubBadge } from "react-icons/di";
+import { FaLinkedin, FaTwitterSquare } from "react-icons/fa";
+import Chat from './Chat';
 
 class Home extends Component{
-  async componentWillMount(){
-    await this.loadWeb3();  
-  }
-
-  async loadWeb3(){
-    if(window.ethereum){
-      window.web3 = new Web3(window.ethereum)
-    }
-    else if(window.web3){
-      window.web3 = new Web3(window.web3.currentProvider)
-    }
-    else{
-      window.alert('non ethereum browser detected');
-    }
-  }
-
   render(){
     return(
     <div>
       <Navigation />
-      <Container className='HomeStart'>
-        <Row>
+      <div className='HomeStart'>
+      <Container >
+        <br />
+        <Row className="justify-content-md-center">
+          <h1>Welcome to the ORBYT Project</h1>
+        </Row>
+        <Row className="justify-content-md-center">
+          We aim to provide people with mobile phone access to secure and affordable financial services. So people everywhere can live better lives.
+        </Row>
+        <br />
+        <br />
+        <Row className="justify-content-md-center">
+          <img src={phone} width={400}/>
         </Row>
       </Container>
-      <Container>
+      </div>
+      <Container >
         <br />
-        <Row>
-          <h2>Projects</h2>
+        <Row className="justify-content-md-center">
+          <h1>The ORBYT system is for everyone</h1>
         </Row>
-        <Row>
+        <Row className="justify-content-md-center">
+          Moving money around the world should be as easy and cheap as sending a message. No matter where you live, what you do, or how much you earn.
+        </Row>
+        <br />
+        <br />
+        <Row className="justify-content-md-center">
           <Col>
             <Card>
               <Card.Body>
-                <Card.Title>Orbyt Wallet</Card.Title>
+                <Card.Title>Secure</Card.Title>
                 <Card.Text>Walllet to send & recieve digital assets</Card.Text>
               </Card.Body>
             </Card>
           </Col>
-
           <Col>
+            <Card>
+              <Card.Body>
+                <Card.Title>Simple</Card.Title>
+                <Card.Text>Walllet to send & recieve digital assets</Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col>
+            <Card>
+              <Card.Body>
+                <Card.Title>Open</Card.Title>
+                <Card.Text>Walllet to send & recieve digital assets</Card.Text>
+              </Card.Body>
+            </Card>
           </Col>
         </Row>
       </Container>
       <Container>
         <br />
-        <Row>
+        <br />
+        <Row className="justify-content-md-center">
           <h2>Team</h2>
         </Row>
-        <Row>
-          <Col>
+        <Row className="justify-content-md-center" >
+          <Col  md="auto">
             <Card>
               <Card.Body>
-                <Card.Title>Sibongiseni Tembe</Card.Title>
-                <Card.Text>Founder & Fullstack Developer</Card.Text>
+                  <Card.Title>Sibongiseni Tembe</Card.Title>
+                  <Card.Text>Founder & Fullstack Developer</Card.Text>
+                  <Button><DiGithubBadge/></Button>
               </Card.Body>
             </Card>
           </Col>
-          <Col>
-          </Col>
         </Row>
       </Container>
+      <br />
+      <br />
+      <br />
+      <div className="Footer">
+        <Container>
+          <Row className="justify-content-md-center">
+            <h4>ORBYT</h4>
+          </Row>
+          <Row className="justify-content-md-center">
+            <Col md="auto">
+              <FaLinkedin/>
+            </Col>
+            <Col md="auto">
+              <FaTwitterSquare/>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+      <Chat />
     </div>
   );
   }
