@@ -6,26 +6,22 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import Navigation from './components/Navigation'
 
+import Navigation from './components/Navigation'
 import Home from './components/Home';
 import Wallet from './components/Wallet';
 
 
 class App extends React.Component {
-  constructor (props){
-		super(props)
-	}
-
   render(){
     return (
       <Router>
-        <Navigation />
+        <Navigation/>
         <Switch>
           <Route path="/wallet">
             <Wallet />
           </Route>
-          <Route path="/Home">
+          <Route path="/">
             <Home />
           </Route>
         </Switch>

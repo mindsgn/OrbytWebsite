@@ -1,7 +1,8 @@
 import React from 'react';
 import './../App.css';
-import  Navbar  from 'react-bootstrap/Navbar';
-import  Nav  from 'react-bootstrap/Nav';
+import Navbar  from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import Button from 'react-bootstrap/Button';
 
 
 class Footer extends React.Component {
@@ -13,6 +14,11 @@ class Footer extends React.Component {
         </Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Link href="/Wallet">Wallet</Nav.Link>
+        </Nav>
+
+        <Nav>
+          <Nav.Link href="/Wallet"></Nav.Link>
+          <Button>Sign In</Button>
         </Nav>
       </Navbar>
     );
